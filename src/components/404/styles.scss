@@ -1,0 +1,25 @@
+.not-found-container {
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('../../assets/images/3.jpg');
+    padding: 30px;
+    min-height: 50em;
+}
+
+.not-found-header {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-found-body {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.not-found-button {
+    padding: 5px;
+    border-radius: 4px;
+    background-color: chartreuse;
+}

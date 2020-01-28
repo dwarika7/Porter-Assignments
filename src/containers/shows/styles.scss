@@ -1,0 +1,28 @@
+.main-container {
+    padding-right: 50px;
+    padding-left: 50px;
+    flex-direction: column;
+    min-height: 50em;
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('../../assets/images/3.jpg');
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.heading {
+    color: blueviolet;
+    font-size: 16px;
+    margin-bottom: 0;
+}
