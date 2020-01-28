@@ -23,14 +23,14 @@ const ShowDetails = () => {
 
     useEffect(() => {
         const show = getShowDetail(jsonData.shows, 'imdbID', id)
-        if(!show.length) {
+        if(!show.imdbID) {
             history.push('/notfound')
             return
         }
-        setShowData(show[0])
+        setShowData(show)
         const images = postersUtil(require.context('../../assets/images/posters', false, /\.(jpg)$/));
         setPosters(images)
-        const url = GET_IMDB_RATING_URL(IMDB_API_KEY, show[0].imdbID)
+        const url = GET_IMDB_RATING_URL(IMDB_API_KEY, show.imdbID)
         apiCall(url)
     }, [])
 

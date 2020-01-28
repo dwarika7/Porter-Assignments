@@ -1,5 +1,8 @@
 function getShowDetail(data, key, value) {
-    return data.filter((ele)=>ele[key] === value)
+    let result = data.reduce((acc,ele) => {
+        return acc[key] === value ? acc : ele[key] === value  ? ele : {}
+    },{})
+    return result;
 }
 
 
