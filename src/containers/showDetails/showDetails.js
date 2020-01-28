@@ -5,7 +5,7 @@ import jsonData from '../../mockjson/data';
 import getShowDetail from '../../utils/filterJsonWithId'
 import './styles.scss'
 import {IMDB_API_KEY} from '../../common/constants';
-import {GET_IMDB_RATING_URL, IFRAME_YOUTUBE_URL} from '../../common/url';
+import {GET_IMDB_RATING_URL, IFRAME_YOUTUBE_URL} from '../../common/urls';
 import Loader from '../../assets/images/loading.png';
 import postersUtil from '../../utils/postersUtil';
 
@@ -25,6 +25,7 @@ const ShowDetails = () => {
         const show = getShowDetail(jsonData.shows, 'imdbID', id)
         if(!show.length) {
             history.push('/notfound')
+            return
         }
         setShowData(show[0])
         const images = postersUtil(require.context('../../assets/images/posters', false, /\.(jpg)$/));

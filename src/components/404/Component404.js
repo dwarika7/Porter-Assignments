@@ -1,12 +1,12 @@
-import React from 'react';
-import image404 from '../../assets/images/404.png';
-// import { useHistory } from 'react-router-dom'
+import React from 'react'
+import { useHistory } from 'react-router-dom'
+import image404 from '../../assets/images/404.jpeg';
 import './styles.scss'
 
-const component404 = () => {
-    // const history = useHistory()
+const Component404 = () => {
+    let history = useHistory();
     const homePage = () => {
-        // history.push('/')
+        history.push('/')
     }
     return (
     <div className="not-found-container">
@@ -20,4 +20,4 @@ const component404 = () => {
     )
 }
 
-export default component404;
+export default Component404;
